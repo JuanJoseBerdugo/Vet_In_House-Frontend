@@ -4,6 +4,7 @@ import { DashboardPage } from "../features/dashboard/DashboardPage";
 import { getStoredSession, saveSession, clearSession } from "../features/auth/session";
 import { UNAUTHORIZED_EVENT } from "../lib/api/apiClient";
 import type { AuthSession } from "../types/auth";
+import "./App.css";
 
 export function App() {
   const [session, setSession] = useState<AuthSession | null>(null);

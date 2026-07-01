@@ -1,6 +1,7 @@
 import { Icon } from "./Icon";
 import type { IconName } from "./Icon";
 import type { NavKey } from "../navigation";
+import "./Sidebar.css";
 
 type NavItem = {
   key: NavKey;

@@ -3,6 +3,7 @@ import { Icon } from "./Icon";
 import { PetAvatar } from "./PetAvatar";
 import { usePets } from "../state/PetContext";
 import { phaseLabel, useSimulatedWalk } from "../state/SimulatedWalkContext";
+import "./Topbar.css";
 
 type TopbarProps = {
   userName: string;

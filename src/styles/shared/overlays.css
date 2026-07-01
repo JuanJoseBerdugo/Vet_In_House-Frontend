@@ -1,0 +1,223 @@
+/* ─── Overlay / dialog ─── */
+.vih-overlay {
+  position: fixed;
+  inset: 0;
+  background: oklch(0.2 0.02 155 / 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 70;
+  animation: vih-fade-in 0.22s ease both;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+@keyframes vih-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.vih-dialog {
+  width: min(520px, 100%);
+  max-height: min(720px, calc(100dvh - 48px));
+  background: var(--surface);
+  border-radius: var(--r-card);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--sh-float);
+  animation: vih-rise 0.3s ease both;
+  margin: auto;
+}
+
+.vih-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 22px 22px 12px;
+  flex: 0 0 auto;
+}
+
+.vih-dialog-header h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin: 0;
+}
+
+.vih-dialog-header p {
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin: 4px 0 0;
+}
+
+.vih-dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vih-dialog-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.vih-dialog-body {
+  padding: 6px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.vih-dialog-body textarea {
+  min-height: 76px;
+  max-height: 160px;
+}
+
+.vih-dialog-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.vih-dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 22px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+  flex: 0 0 auto;
+}
+
+@media (max-width: 520px) {
+  .vih-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .vih-dialog {
+    max-height: 92dvh;
+    border-radius: 28px 28px 0 0;
+  }
+
+  .vih-dialog-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Toast ─── */
+.vih-toast-stack {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 80;
+  pointer-events: none;
+}
+
+.vih-toast {
+  padding: 12px 18px;
+  border-radius: var(--r-pill);
+  background: oklch(0.18 0.02 155 / 0.94);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  box-shadow: var(--sh-float);
+  animation: vih-toast-in 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+  pointer-events: auto;
+}
+
+.vih-toast-success {
+  background: var(--green-cta);
+}
+
+.vih-toast-error {
+  background: oklch(0.55 0.18 28);
+}
+
+@keyframes vih-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ─── Responsive dashboard ─── */
+@media (max-width: 1100px) {
+  .vih-grid {
+    grid-template-columns: 1fr;
+  }
+  .vih-active-walk-body {
+    flex-direction: column;
+  }
+  .vih-active-walk-side {
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) {
+  .vih-dashboard {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+  .vih-sidebar {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 18px;
+    overflow-x: auto;
+  }
+  .vih-sidebar-brand {
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+  .vih-sidebar-nav {
+    flex-direction: row;
+    flex: 1;
+    overflow-x: auto;
+  }
+  .vih-sidebar-bottom {
+    display: none;
+  }
+  .vih-topbar {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+  .vih-topbar-search {
+    width: 100%;
+    order: 3;
+  }
+  .vih-main-content {
+    padding: 20px 18px 36px;
+  }
+  .vih-services-grid {
+    grid-template-columns: 1fr;
+  }
+  .vih-stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+

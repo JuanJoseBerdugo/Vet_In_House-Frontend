@@ -1,0 +1,103 @@
+/* ═══════════════════════════════════════════════════════════
+   SERVICE WIZARD + PROVIDERS + DEMO + LIVE WALK + SUCCESS
+   ═══════════════════════════════════════════════════════════ */
+
+/* Section head */
+.vih-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.vih-section-head .vih-section-title {
+  margin-bottom: 0;
+}
+
+/* Demo banner (when no walk active) */
+.vih-demo-banner {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 22px;
+  background:
+    radial-gradient(circle at 100% 0%, oklch(0.93 0.07 152 / 0.4), transparent 55%),
+    linear-gradient(135deg, var(--mint-50), var(--surface));
+  border: 1px solid oklch(0.86 0.06 150);
+}
+
+.vih-demo-banner-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.vih-demo-banner-tag {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: var(--r-pill);
+  background: var(--green-cta);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.vih-demo-banner h2 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  margin: 8px 0 4px;
+  color: var(--ink);
+}
+
+.vih-demo-banner p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Topbar live button */
+.vih-topbar-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  border: 0;
+  background: var(--green-cta);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 18px -8px oklch(0.565 0.13 153 / 0.55);
+}
+
+.vih-topbar-live:hover {
+  background: var(--green-cta-2);
+}
+
+.vih-topbar-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  animation: vih-pulse-white 1.6s infinite;
+}
+
+@keyframes vih-pulse-white {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+

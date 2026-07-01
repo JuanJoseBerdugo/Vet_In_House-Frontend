@@ -1,0 +1,31 @@
+/* ─── Generic view layout ─── */
+.vih-view {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.vih-view-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.vih-view-header h1 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.vih-view-header p {
+  font-size: 14px;
+  color: var(--ink-mute);
+  margin: 4px 0 0;
+}
+
+/* ─── Buttons & inputs ─── */

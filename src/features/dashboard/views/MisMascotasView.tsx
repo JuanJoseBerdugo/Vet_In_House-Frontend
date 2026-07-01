@@ -24,6 +24,8 @@ import type {
   Mascota,
   Vacuna,
 } from "../../../types/domain";
+import "./MisMascotasView.css";
+import "./MisMascotasUpload.css";
 
 type MisMascotasViewProps = {
   token: string;

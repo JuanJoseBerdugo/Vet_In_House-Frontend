@@ -1,0 +1,132 @@
+.vih-photo-upload {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border: 1.5px dashed oklch(0.82 0.08 153);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, var(--mint-50), rgba(255, 255, 255, 0.94)),
+    var(--surface);
+}
+
+.vih-photo-upload.has-photo {
+  border-style: solid;
+  border-color: oklch(0.82 0.09 153);
+}
+
+.vih-photo-upload-preview {
+  width: 74px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--mint-100) center/cover no-repeat;
+  color: var(--green-cta);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.vih-photo-upload-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vih-photo-upload-copy span {
+  color: var(--green-deep);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vih-photo-upload-copy strong {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.vih-photo-upload-copy p {
+  overflow: hidden;
+  margin: 0;
+  color: var(--ink-mute);
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vih-photo-upload-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vih-photo-upload-button,
+.vih-photo-remove {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.vih-photo-upload-button {
+  padding: 0 15px;
+  border: 0;
+  background: var(--green-cta);
+  color: #fff;
+  box-shadow: 0 10px 22px -14px oklch(0.42 0.12 153 / 0.75);
+}
+
+.vih-photo-upload-button input {
+  display: none;
+}
+
+.vih-photo-remove {
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+}
+
+.vih-photo-remove:hover:not(:disabled) {
+  color: var(--danger);
+  border-color: oklch(0.78 0.14 28);
+}
+
+.vih-photo-upload-button:has(input:disabled),
+.vih-photo-remove:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+@media (max-width: 620px) {
+  .vih-photo-upload {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .vih-photo-upload-preview {
+    width: 64px;
+    border-radius: 18px;
+  }
+
+  .vih-photo-upload-actions {
+    grid-column: 1 / -1;
+    justify-content: stretch;
+  }
+
+  .vih-photo-upload-button,
+  .vih-photo-remove {
+    flex: 1;
+  }
+}
+

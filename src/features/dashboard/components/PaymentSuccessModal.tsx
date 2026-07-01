@@ -1,5 +1,6 @@
 import { DialogPortal } from "./DialogPortal";
 import { Icon } from "./Icon";
+import "./PaymentSuccessModal.css";
 
 type PaymentSuccessModalProps = {
   title: string;

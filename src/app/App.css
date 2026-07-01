@@ -1,0 +1,72 @@
+/* ───── Dashboard (unchanged behavior, just retuned) ───── */
+
+.dashboard-shell {
+  min-height: 100vh;
+  padding: 40px;
+  background: var(--bg);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.95rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+.secondary-action {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--surface);
+  font-weight: 700;
+  transition:
+    transform 0.16s ease,
+    filter 0.16s ease;
+}
+
+.secondary-action:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
+}
+
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.session-grid article {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 20px;
+  background: var(--surface);
+}
+
+.session-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink-mute);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.session-grid strong {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+}
+

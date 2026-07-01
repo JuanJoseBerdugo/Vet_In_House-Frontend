@@ -1,0 +1,160 @@
+/* ─── List ─── */
+.vih-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 18px;
+}
+
+.vih-list-empty {
+  padding: 28px 0;
+  text-align: center;
+}
+
+.vih-list-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.vih-list-row:first-of-type {
+  border-top: 0;
+}
+
+.vih-list-row-stack {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.vih-list-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vih-list-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.vih-list-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.vih-list-meta {
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  margin: 2px 0 0;
+}
+
+.vih-list-amount {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.vih-list-pay {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.vih-list-pay select {
+  flex: 1;
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+}
+
+/* ─── Status badges ─── */
+.vih-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  background: var(--surface-2);
+  color: var(--ink-soft);
+}
+
+.vih-status-completado,
+.vih-status-finalizado,
+.vih-status-pagado,
+.vih-status-enviado,
+.vih-status-entregado {
+  background: oklch(0.93 0.06 150);
+  color: var(--green-deep);
+}
+
+.vih-status-buscando,
+.vih-status-pendiente,
+.vih-status-aceptado,
+.vih-status-en_curso,
+.vih-status-en_progreso {
+  background: oklch(0.94 0.07 88);
+  color: var(--gold-ink);
+}
+
+.vih-status-cancelado,
+.vih-status-rechazado {
+  background: oklch(0.94 0.05 25);
+  color: oklch(0.5 0.16 28);
+}
+
+/* ─── Stats row ─── */
+.vih-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.vih-stat-card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  box-shadow: var(--sh-sm);
+  border: 1px solid var(--line);
+}
+
+.vih-stat-card.vih-stat-success {
+  border-color: oklch(0.86 0.1 150);
+  background: linear-gradient(150deg, var(--mint-50), var(--surface));
+}
+
+.vih-stat-card.vih-stat-warn {
+  border-color: oklch(0.86 0.1 88);
+  background: linear-gradient(150deg, var(--gold-50), var(--surface));
+}
+
+.vih-stat-label {
+  font-size: 12px;
+  color: var(--ink-mute);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 10px 0 4px;
+}
+
+.vih-stat-card strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+

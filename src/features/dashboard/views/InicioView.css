@@ -1,0 +1,339 @@
+/* ─── Active walk ─── */
+.vih-active-walk {
+  padding: 16px;
+}
+
+.vih-active-walk-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green-cta);
+  letter-spacing: 0.04em;
+  margin-bottom: 13px;
+}
+
+.vih-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-cta);
+  animation: vih-pulse 1.8s infinite;
+}
+
+.vih-active-walk-body {
+  display: flex;
+  gap: 16px;
+}
+
+.vih-active-walk-map {
+  flex: 1;
+  min-width: 0;
+}
+
+.vih-active-walk-side {
+  width: 196px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vih-active-walk-person {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.vih-person-name {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.vih-person-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
+.vih-eta {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--mint-50);
+}
+
+.vih-eta p {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin: 0;
+}
+
+.vih-eta-time {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--green-deep);
+  line-height: 1;
+}
+
+.vih-active-walk-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: auto;
+}
+
+/* ─── Services grid ─── */
+.vih-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.vih-service-card {
+  text-align: left;
+  background: var(--surface);
+  border: 0;
+  border-radius: var(--r-lg);
+  padding: 18px;
+  box-shadow: var(--sh-card);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  animation: vih-rise 0.5s ease both;
+  font-family: var(--font-body);
+}
+
+.vih-service-card:hover {
+  box-shadow: var(--sh-float);
+  transform: translateY(-2px);
+}
+
+.vih-service-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 15px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.vih-service-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vih-service-label {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.vih-service-desc {
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-top: 2px;
+}
+
+/* ─── Pet card ─── */
+.vih-pet-card {
+  overflow: hidden;
+  padding: 14px;
+  border: 1px solid oklch(0.91 0.016 150);
+}
+
+.vih-pet-card-hero {
+  position: relative;
+  height: 164px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background-size: 20px 20px;
+}
+
+.vih-pet-card-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+  transform: scale(1.01);
+}
+
+.vih-pet-card-body {
+  padding: 16px 4px 2px;
+}
+
+.vih-pet-card-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.vih-pet-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.vih-pet-kind {
+  font-size: 13.5px;
+  color: var(--ink-mute);
+  margin: 4px 0 0;
+  line-height: 1.35;
+}
+
+.vih-pet-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.vih-pet-badge {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: var(--r-md);
+  background: linear-gradient(145deg, var(--mint-50), var(--surface));
+  border: 1px solid oklch(0.9 0.035 150);
+}
+
+.vih-pet-badge-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--sh-sm);
+}
+
+.vih-pet-badge p {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+  margin: 0;
+}
+
+.vih-pet-badge strong {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.vih-pet-badge span {
+  font-size: 11.5px;
+  font-weight: 650;
+  color: var(--ink-soft);
+  line-height: 1.2;
+}
+
+.vih-pet-card-link {
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  padding: 6px 0 2px;
+  color: var(--green-cta);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.vih-pet-card-link:hover {
+  color: var(--green-deep);
+}
+
+/* ─── Reorder ─── */
+.vih-reorder {
+  padding: 18px;
+}
+
+.vih-reorder-row {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-body);
+}
+
+.vih-reorder-row:first-of-type {
+  border-top: 0;
+}
+
+.vih-reorder-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.vih-reorder-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vih-reorder-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.vih-reorder-sub {
+  font-size: 12px;
+  color: var(--ink-mute);
+}
+
+/* Inicio responsive */
+@media (max-width: 900px) {
+  .vih-demo-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .vih-pet-card {
+    padding: 12px;
+  }
+
+  .vih-pet-card-hero {
+    height: 138px;
+    border-radius: 18px;
+  }
+
+  .vih-pet-badges {
+    grid-template-columns: 1fr;
+  }
+}

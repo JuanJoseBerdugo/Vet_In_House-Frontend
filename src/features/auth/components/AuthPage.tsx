@@ -3,6 +3,8 @@ import type { FormEvent, ReactNode } from "react";
 import { PetVideoShowcase } from "../../media/components/PetVideoShowcase";
 import { login, register } from "../api/authApi";
 import type { AuthSession } from "../../../types/auth";
+import "./AuthPage.css";
+import "./AuthPage.responsive.css";
 
 type AuthMode = "login" | "register";
 

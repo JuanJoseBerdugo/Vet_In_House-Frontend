@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPetVideos, type PetVideo } from "../api/pixabayApi";
+import "./PetVideoShowcase.css";
 
 export function PetVideoShowcase() {
   const [videos, setVideos] = useState<PetVideo[]>([]);

@@ -4,6 +4,7 @@ import { Icon } from "./Icon";
 import type { IconName } from "./Icon";
 import { listPlanesPremium } from "../../marketing/api/marketingApi";
 import type { PlanPremium } from "../../../types/domain";
+import "./PremiumModal.css";
 
 type PremiumModalProps = {
   onClose: () => void;

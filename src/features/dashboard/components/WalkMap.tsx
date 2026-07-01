@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Icon } from "./Icon";
 import type { WalkPhase } from "../state/SimulatedWalkContext";
+import "./WalkMap.css";
 
 type WalkMapProps = {
   phase: WalkPhase;

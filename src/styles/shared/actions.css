@@ -1,0 +1,130 @@
+.vih-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--r-md);
+  background: var(--green-cta);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px -8px oklch(0.565 0.13 153 / 0.45);
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.22s ease,
+    background 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.vih-primary:hover:not(:disabled) {
+  background: var(--green-cta-2);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px -8px oklch(0.565 0.13 153 / 0.5);
+}
+
+.vih-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.vih-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.vih-ghost:hover {
+  border-color: var(--green-cta);
+  color: var(--ink);
+  background: var(--surface-2);
+}
+
+.vih-icon-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+.vih-icon-btn:hover:not(:disabled) {
+  border-color: var(--green-cta);
+  color: var(--ink);
+}
+
+.vih-icon-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.vih-icon-btn-primary {
+  background: var(--green-cta);
+  color: #fff;
+  border-color: var(--green-cta);
+}
+
+.vih-icon-btn-primary:hover:not(:disabled) {
+  background: var(--green-cta-2);
+  color: #fff;
+}
+
+.vih-icon-btn-danger:hover:not(:disabled) {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.vih-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.vih-input input,
+.vih-input select,
+.vih-input textarea {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  resize: vertical;
+}
+
+.vih-input input:focus,
+.vih-input select:focus,
+.vih-input textarea:focus {
+  border-color: var(--green-cta);
+  box-shadow: 0 0 0 4px oklch(0.565 0.13 153 / 0.12);
+}
+

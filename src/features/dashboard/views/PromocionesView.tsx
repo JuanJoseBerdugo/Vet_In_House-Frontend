@@ -6,6 +6,7 @@ import {
 } from "../../marketing/api/marketingApi";
 import type { NavKey } from "../navigation";
 import type { PlanPremium, PromocionPetshop } from "../../../types/domain";
+import "./PromocionesView.css";
 
 type PromocionesViewProps = {
   onNavigate: (key: NavKey) => void;

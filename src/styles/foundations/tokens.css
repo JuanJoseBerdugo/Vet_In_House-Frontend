@@ -1,0 +1,124 @@
+/* Vet-In-House — design tokens & base */
+
+:root {
+  /* surfaces — warm cream whites */
+  --bg: oklch(0.985 0.01 120);
+  --surface: #ffffff;
+  --surface-2: oklch(0.975 0.018 142);
+  --surface-3: oklch(0.962 0.028 150);
+
+  /* ink — deep green-grays */
+  --ink: oklch(0.3 0.025 155);
+  --ink-soft: oklch(0.46 0.02 155);
+  --ink-mute: oklch(0.62 0.015 155);
+  --line: oklch(0.92 0.012 150);
+
+  /* mint */
+  --mint-50: oklch(0.967 0.028 152);
+  --mint-100: oklch(0.935 0.052 152);
+  --mint-200: oklch(0.885 0.078 152);
+  --green: oklch(0.74 0.12 150);
+
+  /* green CTA */
+  --green-cta: oklch(0.565 0.13 153);
+  --green-cta-2: oklch(0.51 0.125 154);
+  --green-deep: oklch(0.42 0.09 156);
+
+  /* gold */
+  --gold-50: oklch(0.965 0.03 88);
+  --gold-100: oklch(0.925 0.06 88);
+  --gold: oklch(0.83 0.1 88);
+  --gold-600: oklch(0.74 0.115 84);
+  --gold-ink: oklch(0.5 0.09 76);
+
+  /* danger */
+  --danger: oklch(0.55 0.18 28);
+  --danger-bg: oklch(0.97 0.03 25);
+  --danger-border: oklch(0.85 0.1 25);
+
+  /* radii */
+  --r-card: 28px;
+  --r-lg: 22px;
+  --r-md: 16px;
+  --r-sm: 12px;
+  --r-pill: 999px;
+
+  /* shadows */
+  --sh-sm: 0 1px 2px oklch(0.4 0.04 155 / 0.06), 0 2px 6px oklch(0.4 0.04 155 / 0.05);
+  --sh-card: 0 2px 4px oklch(0.4 0.04 155 / 0.05), 0 10px 24px oklch(0.4 0.04 155 / 0.07);
+  --sh-float: 0 6px 14px oklch(0.4 0.04 155 / 0.1), 0 20px 44px oklch(0.4 0.04 155 / 0.12);
+
+  /* type */
+  --font-display: "Fredoka", ui-rounded, system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  color: var(--ink);
+  background: var(--bg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+body.vih-modal-open .vih-main,
+body.vih-modal-open .vih-sidebar {
+  overflow: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.vih {
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.vih h1,
+.vih h2,
+.vih h3,
+.vih h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.vih p {
+  margin: 0;
+}
+
+.vih-press {
+  transition:
+    transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.18s ease,
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    filter 0.18s ease;
+}
+
+.vih-press:active:not(:disabled) {
+  transform: scale(0.97);
+}
+

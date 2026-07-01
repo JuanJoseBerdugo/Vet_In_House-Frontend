@@ -17,6 +17,7 @@ import { listHistorialServicios } from "../../services/api/serviciosApi";
 import { ApiError } from "../../../lib/api/apiClient";
 import type { Servicio } from "../../../types/domain";
 import type { NavKey } from "../navigation";
+import "./InicioView.css";
 
 type InicioViewProps = {
   token: string;

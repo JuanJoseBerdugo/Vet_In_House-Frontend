@@ -9,6 +9,7 @@ import { getPetShopImages, type PetShopImage } from "../../media/api/pixabayApi"
 import { listPromociones } from "../../marketing/api/marketingApi";
 import { ApiError } from "../../../lib/api/apiClient";
 import type { MetodoPago, Producto, PromocionPetshop } from "../../../types/domain";
+import "./TiendaView.css";
 
 type TiendaViewProps = {
   token: string;

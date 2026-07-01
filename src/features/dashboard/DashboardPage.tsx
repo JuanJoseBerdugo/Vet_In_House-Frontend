@@ -25,6 +25,11 @@ import type { ServiceEntry } from "./data/catalog";
 import type { Provider } from "./data/providers";
 import type { AuthSession } from "../../types/auth";
 import type { Mascota, Perfil } from "../../types/domain";
+import "./DashboardPage.css";
+import "./DashboardMain.css";
+import "./DashboardPrimitives.css";
+import "./components/ServiceDemo.css";
+import "./views/DashboardViewLayout.css";
 
 type DashboardPageProps = {
   session: AuthSession;

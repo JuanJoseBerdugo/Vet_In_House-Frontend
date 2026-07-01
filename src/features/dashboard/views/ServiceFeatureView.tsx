@@ -22,6 +22,7 @@ import type {
   ServicioExtra,
   TipoServicio,
 } from "../../../types/domain";
+import "./ServiceFeatureView.css";
 
 export type ServiceFeatureKey = "paseo" | "vet" | "pelu";
 

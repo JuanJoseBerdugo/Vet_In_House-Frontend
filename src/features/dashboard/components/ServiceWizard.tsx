@@ -18,6 +18,7 @@ import { solicitarServicio } from "../../services/api/serviciosApi";
 import { procesarPago } from "../../payments/api/pagosApi";
 import { ApiError } from "../../../lib/api/apiClient";
 import type { Mascota, TipoServicio } from "../../../types/domain";
+import "./ServiceWizard.css";
 
 type ServiceWizardProps = {
   service: ServiceEntry;

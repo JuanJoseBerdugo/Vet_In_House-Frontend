@@ -6,6 +6,7 @@ import { PetAvatar } from "./PetAvatar";
 import { WalkMap } from "./WalkMap";
 import { phaseLabel, useSimulatedWalk } from "../state/SimulatedWalkContext";
 import { profileForPet } from "../data/catalog";
+import "./LiveWalkPanel.css";
 
 type LiveWalkPanelProps = {
   onClose: () => void;
